@@ -1,0 +1,33 @@
+echo "Greattabel"
+mkdir Learning
+mkdir biocomputing && biocomputing
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.fna
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+wget https://raw.githubusercontent.com/josoga2/dataset-repos/main/wildtype.gbk
+mv wildtype.fna biocomputing
+rm wildtype.gbk
+grep 'tatatata' wildtype.fna
+grep 'tatatata' wildtype.fna
+grep -c 'tatatata' wildtype.fna
+grep -c 'tata' wildtype.fna
+grep 'tatatata' wildtype.fna > mutant.fna
+sed '1,/^ORIGIN/d' wildtype.gbk | wc -l
+wc -l wildtype.gbk
+awk '/^LOCUS/{print $3}' wildtype.gbk
+awk '/^SOURCE/{print substr($0, 13)}' wildtype.gbk
+grep '/gene=' wildtype.gbk | awk -F'=' '{print $2}' | sed 's/"//g'
+history
+ls 
+conda activate base
+conda create -n funtools
+conda activate funtools
+conda install -c conda-forge pyfiglet
+figlet Greattabel
+conda install -c bioconda bwa
+conda install -c bioconda blast
+conda create -n bio_env -c conda-forge -c bioconda samtools
+conda install -c bioconda bedtools
+conda install -c bioconda spades
+conda install -c bioconda bcftools
+conda install -c bioconda fastp
+conda create -n multiqc_env -c conda-forge -c bioconda multiqc
